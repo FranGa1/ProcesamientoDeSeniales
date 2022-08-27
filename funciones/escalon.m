@@ -14,7 +14,7 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} cajon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} escalon (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
@@ -22,19 +22,10 @@
 ## Author: franc <franc@DESKTOP-IGR40E0>
 ## Created: 2022-08-27
 
-function y = cajon (t, t0, t_evaluar=[])
-  # Si se quiere evaluar al cajon en un valor
-  if (isempty(t_evaluar))
-    # Se obtiene el conjunto de valores en y del cajon a partir del escalon
-    # a partir
-    escalon1 = t>=(1/2+t0);
-    escalon2 = t>=(-1/2+t0);
-    y = escalon2-escalon1;
+function u = escalon (t, t0)
+  if (t-t0) >= (-1/2)
+    u = 1;
   else
-    if ((t_evaluar-t0) >= (-1/2)) && ((t_evaluar-t0) <= (1/2))
-      y = 1;
-    else
-      y = 0;
-    endif
+    u = 0;
   endif
 endfunction
