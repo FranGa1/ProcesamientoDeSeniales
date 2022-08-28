@@ -14,23 +14,15 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} escalon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} plotEscalon (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-27
+## Created: 2022-08-28
 
-function u = escalon (t, t0, t_evaluar=[])
-  # Si se quiere evaluar al escalon en un valor
-  if (isempty(t_evaluar))
-    u = t>=t0;
-  else
-    if (t_evaluar-t0 >= 0)
-      u = 1;
-    else
-      u = 0;
-    endif
-  endif
+function retval = plotEscalon (t, t0)
+  e = escalon(t, t0);
+  plotCompleto(t, e, [t(1) t(end) -2 2],'t','u(t)','Señal Escalon',20,'r',1.5);
 endfunction

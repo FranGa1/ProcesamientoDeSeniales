@@ -25,6 +25,6 @@
 function plotCajon (t, t0)
   # Se escribe al cajon c
   y_cajon = cajon(t, t0);
-  plotCompleto([t(1) t(end) -2 2],'t','Cajon(t)','Señal Cajon',20,'r*-',0.5,t,y_cajon);
+  plotCompleto(t, y_cajon, [t(1) t(end) -2 2],'t','Cajon(t)','Señal Cajon',20,'r',1.5);
 endfunction
 
