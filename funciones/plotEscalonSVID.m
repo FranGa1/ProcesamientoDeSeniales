@@ -22,7 +22,7 @@
 ## Author: franc <franc@DESKTOP-IGR40E0>
 ## Created: 2022-08-28
 
-function retval = plotEscalon (t, t0)
-  e = escalon(t, t0);
+function retval = plotEscalonSVID (t, t0)
+  e = escalonSVID(t, t0);
   plotCompleto(t, e, [t(1) t(end) -2 2],'t','u(t)','Señal Escalon',20,'r',1.5);
 endfunction
