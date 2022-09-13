@@ -14,23 +14,14 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} escalon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} cajonSVIC (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-27
+## Created: 2022-09-02
 
-function u = escalon (t, t0, t_evaluar=[])
-  # Si se quiere evaluar al escalon en un valor
-  if (isempty(t_evaluar))
-    u = t>=t0;
-  else
-    if (t_evaluar-t0 >= 0)
-      u = 1;
-    else
-      u = 0;
-    endif
-  endif
+function retval = cajonSVIC (input1, input2)
+
 endfunction
