@@ -14,14 +14,27 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} cajonSVIC (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} cajon (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-09-02
+## Created: 2022-08-27
 
-function retval = cajonSVIC (input1, input2)
-
+function y = cajonSVIC (t, t0, t_evaluar=[])
+  # Si se quiere evaluar al cajon en un valor
+  if (isempty(t_evaluar))
+    # Se obtiene el conjunto de valores en y del cajon a partir del escalon
+    # a partir
+    escalon1 = t>=(1/2+t0);
+    escalon2 = t>=(-1/2+t0);
+    y = escalon2-escalon1;
+  else
+    if ((t_evaluar-t0) >= (-1/2)) && ((t_evaluar-t0) <= (1/2))
+      y = 1;
+    else
+      y = 0;
+    endif
+  endif
 endfunction
