@@ -14,15 +14,17 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} plotEscalon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} conv_ (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
-## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-28
+## Author: franc <franc@FRANS-NOTEBOOK>
+## Created: 2022-09-13
 
-function retval = plotEscalonSVIDno (t, t0)
-  e = escalonSVID(t, t0);
-  plotCompleto(t, e, [t(1) t(end) -2 2],'t','u(t)','Señal Escalon',20,'r',1.5);
+function retval = conv_ (x1, x2)
+  conv1 = conv(x1, x2);
+  N = length(x1);
+  
+  retval = conv1(fix(N/2):end-fix((N+1)/2)); 
 endfunction

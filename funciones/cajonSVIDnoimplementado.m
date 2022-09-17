@@ -14,17 +14,14 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} plotCajon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} cajonSVIC (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-27
+## Created: 2022-09-02
 
-function plotCajonSVID (t, t0)
-  # Se escribe al cajon c
-  y_cajon = cajonSVID(t, t0);
-  plotCompleto(t, y_cajon, [t(1) t(end) -2 2],'t','Cajon(t)','Señal Cajon',20,'r',1.5);
+function retval = cajonSVIC (input1, input2)
+
 endfunction
-
