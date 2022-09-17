@@ -14,27 +14,23 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} cajon (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} cajonSVIC (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-27
+## Created: 2022-09-02
 
-function y = cajonSVID (t, t0, t_evaluar=[])
-  # Si se quiere evaluar al cajon en un valor
-  if (isempty(t_evaluar))
-    # Se obtiene el conjunto de valores en y del cajon a partir del escalon
-    # a partir
-    escalon1 = t>=(1/2+t0);
-    escalon2 = t>=(-1/2+t0);
-    y = escalon2-escalon1;
-  else
-    if ((t_evaluar-t0) >= (-1/2)) && ((t_evaluar-t0) <= (1/2))
-      y = 1;
-    else
-      y = 0;
-    endif
+function retval = cajonSVID (n, N, N0)
+  i = 1;
+  total_valores = length(n);
+  while (i <= total_valores) && (n(i) != N0)
+    i+=1;
+  endwhile
+  y_cajon = zeros(total_valores);
+  if (i <= total_valores)
+    y_cajon(i-fix(N/2):i+fix(N/2)) = 1;
   endif
+  retval = y_cajon;
 endfunction
