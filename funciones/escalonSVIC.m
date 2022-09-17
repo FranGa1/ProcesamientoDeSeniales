@@ -22,7 +22,7 @@
 ## Author: franc <franc@DESKTOP-IGR40E0>
 ## Created: 2022-08-27
 
-function u = escalonSVID (t, t0, t_evaluar=[])
+function u = escalonSVIC (t, t0, t_evaluar=[])
   # Si se quiere evaluar al escalon en un valor
   if (isempty(t_evaluar))
     u = t>=t0;
