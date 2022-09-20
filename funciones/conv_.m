@@ -23,8 +23,8 @@
 ## Created: 2022-09-13
 
 function retval = conv_ (x1, x2)
-  conv1 = conv(x1, x2);
+  conv1 = conv(x1, x2, "full");
   N = length(x1);
-  
-  retval = conv1(fix(N/2):end-fix((N+1)/2)); 
+
+  retval = conv1(fix(N/2):end-fix((N+1)/2));
 endfunction
