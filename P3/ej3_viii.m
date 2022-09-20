@@ -1,10 +1,11 @@
 clear
-addpath("../funciones")
+addpath("./funciones")
 
 a = 1;
 b = 1;
 
-t = -5:0.001:5;
+dt = 0.001;
+t = -5:dt:25;
 u = escalonSVIC(t, 0);
 
 exp1 = e.^(-1.*t.*a);
@@ -21,5 +22,9 @@ endif
 
 plotCompleto(t, res);
 
-convolucion = conv_(x,h);
+convolucion = conv(x,h, "same") * dt;
+convolucion1 = conv(x,h) * dt;
 plotCompleto(t, convolucion);
+figure;
+plot(convolucion1);
+#plotCompleto(t, convolucion1);
