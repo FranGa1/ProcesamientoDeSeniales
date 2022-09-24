@@ -22,7 +22,7 @@
 ## Author: franc <franc@DESKTOP-IGR40E0>
 ## Created: 2022-08-31
 
-function y_deltaK = deltaK (N, N0)
+function y_deltaK = deltaK (N, N0=0)
 
  ## y_delta = [-N: N];
   y_deltaK = [zeros(1,N+N0) 1 zeros(1,N-N0)];
