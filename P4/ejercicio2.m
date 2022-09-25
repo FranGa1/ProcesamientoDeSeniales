@@ -2,9 +2,9 @@ addpath("./funciones");
 clear
 
 Ts = 1/50;
-t = -30:Ts:30-Ts;
+t = -10:Ts:10-Ts;
 
-x = trianguloSVIC(t);
+x = 1;
 
 plotCompleto(t,x)
 xlabel('Time (seconds)')
@@ -12,6 +12,7 @@ ylabel('Amplitude')
 
 y = fft(x);
 fs = 1/Ts;
+
 ##f = (0:length(y)-1)*fs/length(y);
 ##
 ##plotCompleto(f,abs(y))
