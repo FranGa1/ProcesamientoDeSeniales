@@ -1,10 +1,10 @@
 addpath("./funciones");
 clear
 
-Ts = 1/50;
+Ts = 1/100;
 t = -10:Ts:10-Ts;
 
-x = 1;
+x = cajonSVIC(t-2);
 
 plotCompleto(t,x)
 xlabel('Time (seconds)')
