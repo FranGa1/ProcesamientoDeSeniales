@@ -11,7 +11,7 @@
 % xa = -2*sin(-0.2*t + 5/3*pi);
 % plotCompleto([t(1) t(end) -2 2],'t','f(t)','Se~nal f(t)',20,'r*-',1.5,t,xa)
 
-function plotCompleto(t, x, titulo='Señal', lim_ejes=[t(1) t(end) min(x)-1 max(x)+1], eje_x='t', eje_y='f(t)', tam_letra=15, col='r', grosor=1.5)
+function plotCompleto(t, x , eje_x='t', eje_y='f(t)', titulo='Señal', tam_letra=15, col='r', grosor=1.5, lim_ejes=[t(1) t(end) min(x)-1 max(x)+1])
   % Realiza un grÂ´afico de una SVIC de manera adecuada.
   % Ejemplo de uso:
   % t = -40:0.01:40;

@@ -14,16 +14,22 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} delta (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} deltaKr (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
-## Author: franc <franc@DESKTOP-IGR40E0>
-## Created: 2022-08-31
+## Author: franc <franc@FRANS-NOTEBOOK>
+## Created: 2022-11-01
 
-function y_deltaK = deltaK (N, N0=0)
-
- ## y_delta = [-N: N];
-  y_deltaK = [zeros(1,N+N0) 1 zeros(1,N-N0)];
+function retval = deltaK (n)
+  r = zeros(length(n), 1)';
+  for i=1:length(n) 
+    if (n(i) == 0)
+      r(i) = 1;
+    else
+      r(i) = 0;
+    endif
+  endfor
+  retval = r;
 endfunction
