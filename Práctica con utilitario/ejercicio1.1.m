@@ -1,7 +1,7 @@
 addpath("../AnSyS2022_PU1_m")
 
 [n, x] = senial(26287);
-plotCompletoSVID(n,x, 'n', 'x[n]', 'Señal ejercicio 1');
+plotCompletoSVID(n,x, 'n', 'x[n]', 'SeÃ±al ejercicio 1');
 ds = 0.0001; s = [-1/2:ds:1/2]; X = zeros(size(s));
 
 for k = 1:length(s)
