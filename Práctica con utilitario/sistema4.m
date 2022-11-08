@@ -22,12 +22,12 @@
 ## Author: franc <franc@FRANS-NOTEBOOK>
 ## Created: 2022-11-08
 
-function y = sistema4 (n, x)
-  N = length(n);
+function y = sistema4 (x)
+  N = length(x);
   y(1) = (1/2)*x(1);
-  
+
   for k=2:N
     y(k) = (1/4)*x(k) - (1/4)*x(k-1) - (1/2)*y(k-1);
   endfor
-  
+
 endfunction
