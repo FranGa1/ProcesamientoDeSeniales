@@ -1,7 +1,7 @@
 addpath("./AnSyS2022_PU1_m")
 
 # Generación y gráfico de la señal
-[n, x] = senial(26287);
+[n, x] = senial(27144);
 plotCompletoSVID(n,x, 'n', 'x[n]', 'Señal ejercicio 1');
 
 # Cálculo de su TFTD
