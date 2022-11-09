@@ -9,7 +9,7 @@ ds = 0.0001; s = [-1/2:ds:1/2];
 X = zeros(size(s));
 for k = 1:length(s)
   X(k)=sum(x.*exp(-1i*2*pi*s(k)*n));
-end
+endfor
 
 # Gráfico del módulo de la TFTD de x
 plotCompleto(s, abs(X), 's', 'Mod ulo de la TFTD{x[n]}');
