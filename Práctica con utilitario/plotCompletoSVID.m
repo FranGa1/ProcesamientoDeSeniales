@@ -7,7 +7,7 @@ function plotCompletoSVID(n, x,titulo='Senial', eje_x='n',eje_y='x[n]',tam_letra
   % xa = -2*sin(-0.2*t + 5/3*pi);
   % plotCompleto([t(1) t(end) -2 2],'t','f(t)','Se~nal f(t)',20,'r*-',1.5,t,xa)
   figure('units','normalized','outerposition',[0 0 1 1]);
-  stem(n, x, col,'Linewidth',grosor)
+  stem(n, x, col, 'Linewidth',grosor)
   axis(lim_ejes); grid on;
   set(gca,'FontSize', tam_letra);
   xlabel(eje_x,'Interpreter','Latex');

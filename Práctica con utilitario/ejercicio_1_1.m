@@ -1,8 +1,8 @@
 addpath("./AnSyS2022_PU1_m")
 
 # Generación y gráfico de la señal
-[n, x] = senial(27144);
-plotCompletoSVID(n,x, 'n', 'x[n]', 'Señal ejercicio 1');
+[n, x] = senial(26287);
+plotCompletoSVID(n,x, 'Señal ejercicio 1', 'n', 'x[n]');
 
 # Cálculo de su TFTD
 ds = 0.0001; s = [-1/2:ds:1/2];
@@ -12,6 +12,6 @@ for k = 1:length(s)
 endfor
 
 # Gráfico del módulo de la TFTD de x
-plotCompleto(s, abs(X), 's', 'Mod ulo de la TFTD{x[n]}');
+plotCompleto(s, abs(X), 'Módulo de la TFTD{x[n]}', 's', 'abs(X)');
 # Gráfico de la fase de la TFTD de x
-plotCompleto(s, angle(X), 's', 'Fase de la TFTD{x[n]}');
+plotCompleto(s, angle(X), 'Fase de la TFTD{x[n]}', 's', 'angle(X)');

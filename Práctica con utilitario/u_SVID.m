@@ -1,4 +1,4 @@
-## Copyright (C) 2022 franc
+## Copyright (C) 2022 Jero
 ##
 ## This program is free software: you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -8,27 +8,25 @@
 ## This program is distributed in the hope that it will be useful,
 ## but WITHOUT ANY WARRANTY; without even the implied warranty of
 ## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-## GNU General Public Li Ocense for more details.
+## GNU General Public License for more details.
 ##
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} deltaKr (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} uSVIC (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
-## Author: franc <franc@FRANS-NOTEBOOK>
-## Created: 2022-11-01
+## Author: Jero <Jero@DESKTOP-148QA5S>
+## Created: 2022-11-09
 
-function retval = deltaK (n)
+function retval = u_SVID (n)
   r = zeros(length(n), 1)';
   for i=1:length(n)
-    if (n(i) == 0)
+    if (n(i) >= 0)
       r(i) = 1;
-    else
-      r(i) = 0;
     endif
   endfor
   retval = r;

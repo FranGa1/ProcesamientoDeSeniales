@@ -10,3 +10,4 @@ end
 
 plotCompleto(s, abs(X), 's', 'Modulo de la TFTD{x[n]}');
 plotCompleto(s, angle(X), 's', 'Fase de la TFTD{x[n]}');
+
