@@ -45,19 +45,19 @@ while play
             switch inc
                 case 1
                     close all;
-                    run ej2_1;
+                    run ejercicio_2_1;
                 case 2
                     close all;
-                    run ej2_2;
+                    run ejercicio_2_2;
                 case 3
                     close all;
-                    run ej2_3;
+                    run ejercicio_2_3;
                 case 4
                     close all;
-                    run ej2_4;
+                    run ejercicio_2_4;
                 case 5
                     close all;
-                    run ej2_5;
+                    run ejercicio_2_5;
                 otherwise
                     close all;
                     disp("\n#### No existe el inciso ####\n");

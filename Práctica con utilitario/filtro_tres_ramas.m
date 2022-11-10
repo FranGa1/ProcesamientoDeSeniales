@@ -14,7 +14,7 @@
 ## along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*-
-## @deftypefn {} {@var{retval} =} y_filtro (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} filtro_tres_ramas (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
@@ -22,18 +22,22 @@
 ## Author: franc <franc@FRANS-NOTEBOOK>
 ## Created: 2022-11-10
 
-function y = y_filtro(x)
+function y = filtro_tres_ramas(x)
     N = length(x);
     y = zeros(N,1);
     for k=1:8820
-        y(k) = x(k);
+      y(k) = x(k);
     end
 
     for k=8821:26460
-        y(k) = x(k) - 0.45*x(k-8820);
+      y(k) = x(k) - 0.45*x(k-8820);
     end
 
-    for k=26461:N
-        y(k) = x(k) - 0.45*x(k-8820) + 0.09*x(k-26460);
+    for k=26461:35280
+      y(k) = x(k) - 0.45*x(k-8820) + 0.09*x(k-26460);
     end
+    
+    for k=35281:N
+      y(k) = x(k) - 0.45*x(k-8820) + 0.09*x(k-26460) - 0.0405*x(k-35280);
+    endfor
 end
