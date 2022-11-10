@@ -22,7 +22,7 @@
 ## Author: franc <franc@FRANS-NOTEBOOK>
 ## Created: 2022-11-10
 
-function y = filtro_dos_rama(x)
+function y = filtro_dos_ramas(x)
     N = length(x);
     y = zeros(N,1);
     for k=1:8820
