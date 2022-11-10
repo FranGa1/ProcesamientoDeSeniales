@@ -2,7 +2,8 @@ s = [-0.5:0.001:0.5];
 
 H1 = 0.5 + 0.5 .* e .^((-1) .* i .* 2 .* pi .* s);
 H2 = 0.5 - 0.5 .* e .^((-1) .* i .* 2 .* pi .* s);
-H3 = zeros(size(s))
+H3 = zeros(size(s));
+H4 = zeros(size(s));
 for k = 1:length(s) % Cantidad de puntos de s
   H3(k) = 0.25 * ((1 + exp(-1i * pi * 2*  s(k))) / (1 - 0.5 * exp(-1i * 2 * pi * s(k))));
   H4(k) = 0.25 * ((1 - exp(-1i * pi * 2*  s(k))) / (1 + 0.5 * exp(-1i * 2 * pi * s(k))));

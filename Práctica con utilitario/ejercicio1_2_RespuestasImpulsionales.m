@@ -1,10 +1,9 @@
 n = [-10:10];
-x = deltaK(n);
 
 h1 = 0.5*deltaK(n) + 0.5*deltaK(n-1);
 h2 = 0.5*deltaK(n) - 0.5*deltaK(n-1);
-h3 = 0.25 .*(0.5).^n .* u_SVID(n) + 0.25 .*(0.5).^(n-1) .* u_SVID(n-1)
-h4 = 0.25 .*(-0.5).^n .* u_SVID(n) - 0.25 .* (-0.5).^(n-1) .* u_SVID(n-1)
+h3 = 0.25 .*(0.5).^n .* u_SVID(n) + 0.25 .*(0.5).^(n-1) .* u_SVID(n-1);
+h4 = 0.25 .*(-0.5).^n .* u_SVID(n) - 0.25 .* (-0.5).^(n-1) .* u_SVID(n-1);
 
 plotCompletoSVID(n,h1, 'Respuesta impulsional Sistema 1', 'n', 'h1[n]')
 

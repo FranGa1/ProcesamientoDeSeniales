@@ -1,24 +1,33 @@
 clear all;
 clc;
+close all;
+play = 1;
 
-while 1
+while play
     pt = input("Ingrese el numero de ejercicio:");
-    inc = input("Ingrese el numero inciso:");
+
+    if (pt != 0)
+      inc = input("Ingrese el numero inciso:");
+    endif
 
     switch pt
+        case 0
+          close all;
+          play = 0;
+
         case 1
 
             switch inc
                 case 1
                     close all;
-                    run ejercicio_1_1;
+                    run ejercicio_1_1.m;
                 case 2
                     close all;
-                    run ejercicio1_2_RespuestasImpulsional;
+                    run ejercicio1_2_RespuestasImpulsionales;
                     run ejercicio1_2_RespuestasEnFrecuencia;
                 case 3
                     close all;
-                    run ejercicio_1_3_RespuestasImpulsional;
+                    run ejercicio_1_3_RespuestasImpulsionales;
                     run ejercicio_1_3_RespuestasEnFrecuencia;
                 case 4
                     close all;
