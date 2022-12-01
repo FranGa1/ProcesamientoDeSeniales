@@ -19,7 +19,9 @@ figure
 plot(x)
 xlabel('n'); % Nombro el eje x.
 ylabel('x[n]'); % Nombro el eje y.
-title('Funci�n de entrada'); % Coloco t´ıtulo para el gr´afico.
+legend('Segundo Canal de x[n]', 'Primer Canal de x[n]')
+title('Función de entrada'); % Coloco t´ıtulo para el gr´afico.
+%print -f3 -dpng "Ej_2_3_Entrada_REFACTOR"
 
 y1 = sistema_ej_2(canal1);
 y2 = sistema_ej_2(canal2);
@@ -39,8 +41,10 @@ title('Segundo canal de y[n]'); % Coloco t´ıtulo para el gr´afico.
 
 figure
 plot(y)
+legend('Segundo Canal de y[n]', 'Primer Canal de y[n]')
 xlabel('n'); % Nombro el eje x.
 ylabel('ys[n]'); % Nombro el eje y.
-title('Funci�n de salida'); % Coloco t´ıtulo para el gr´afico.
+title('Función de salida'); % Coloco t´ıtulo para el gr´afico.
+%print -f6 -dpng "Ej_2_3_Salida_REFACTOR"
 
 sound(y,fs);
