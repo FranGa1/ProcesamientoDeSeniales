@@ -57,7 +57,17 @@ while play
                     run ejercicio_2_4;
                 case 5
                     close all;
-                    run ejercicio_2_5;
+                    rama = input("Ingrese si desea escuhar, 1 (señal original), 2 o 3 (para escuchar la señal filtrada por un filtro de dos o tres ramas: ");
+                    switch rama
+                      case 1
+                        run escuchar_original
+                      case 2
+                        run ejercicio_2_5_dos_ramas
+                      case 3
+                        run ejercicio_2_5_tres_ramas
+                      otherwise
+                        disp("\n#### Opción inválida ####\n");
+                    endswitch
                 otherwise
                     close all;
                     disp("\n#### No existe el inciso ####\n");

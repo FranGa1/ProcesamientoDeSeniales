@@ -43,4 +43,4 @@ xlabel('n'); % Nombro el eje x.
 ylabel('ys[n]'); % Nombro el eje y.
 title('Funci�n de salida'); % Coloco t´ıtulo para el gr´afico.
 
-#sound(y,fs);
+sound(y,fs);
